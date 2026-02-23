@@ -1,27 +1,39 @@
-In this DevOps task,  need to build and deploy a full-stack CRUD application using the MEAN stack (MongoDB, Express, Angular 15, and Node.js). The backend will be developed with Node.js and Express to provide REST APIs, connecting to a MongoDB database. The frontend will be an Angular application utilizing HTTPClient for communication.  
+# MEAN App — DevOps Deployment
 
-The application will manage a collection of tutorials, where each tutorial includes an ID, title, description, and published status. Users will be able to create, retrieve, update, and delete tutorials. Additionally, a search box will allow users to find tutorials by title.
+## Tech Stack
+- MongoDB, Express.js, Angular, Node.js
+- Docker, Docker Compose, Nginx
+- GitHub Actions CI/CD
+- AWS EC2 (Ubuntu 22.04)
 
-## Project setup
+## Setup Instructions
+1. Clone the repo
+2. Configure secrets in GitHub
+3. Push to main branch to trigger CI/CD
+4. Access app at http://YOUR_VM_IP
 
-### Node.js Server
+## Architecture
+[diagram or description of nginx → frontend/backend → mongodb]
 
-cd backend
+## Screenshots
+[Insert your screenshots here]
+```
 
-npm install
+---
 
-You can update the MongoDB credentials by modifying the `db.config.js` file located in `app/config/`.
-
-Run `node server.js`
-
-### Angular Client
-
-cd frontend
-
-npm install
-
-Run `ng serve --port 8081`
-
-You can modify the `src/app/services/tutorial.service.ts` file to adjust how the frontend interacts with the backend.
-
-Navigate to `http://localhost:8081/`
+## 🗂️ Final Repository Structure
+```
+mean-app-devops/
+├── backend/
+│   ├── Dockerfile
+│   └── ... (app code)
+├── frontend/
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   └── ... (app code)
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── docker-compose.yml
+├── nginx-proxy.conf
+└── README.md
