@@ -20,6 +20,7 @@ services:
       - "3000:3000"
     environment:
       - MONGO_URI=mongodb://mongodb:27017/meandb
+      - PORT=3000
     depends_on:
       - mongodb
     networks:
